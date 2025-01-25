@@ -1,6 +1,5 @@
 # Social-Media-App [League]
 
-**Overview**
 This project demonstrates an Android application that displays a list of user posts. It follows Clean Architecture, uses Jetpack Compose for the UI, and leverages Hilt for dependency injection. The project fetches data from a REST API, processes it, and displays it in a responsive UI.
 
 # Clean Architecture
@@ -8,19 +7,19 @@ This project demonstrates an Android application that displays a list of user po
 **Why Clean Architecture Was Chosen:**
 Clean Architecture was chosen for this project to ensure maintainability, scalability, and testability. Clean Architecture separates the app into distinct layers, each with its own responsibility:
 
-1. Presentation Layer: Handles UI and user interaction. It contains the ViewModel that communicates with the UseCase to process UI-related logic.
+**1. Presentation Layer:** Handles UI and user interaction. It contains the ViewModel that communicates with the UseCase to process UI-related logic.
 
-2. Domain Layer: Contains the business logic. It includes the UseCase, which defines the operations the app can perform and calls the Repository to fetch or process data.
+**2. Domain Layer:** Contains the business logic. It includes the UseCase, which defines the operations the app can perform and calls the Repository to fetch or process data.
 
-3. Data Layer: Handles data operations, such as interacting with APIs or databases. It contains the Repository and ApiService for data fetching.
+**3. Data Layer:** Handles data operations, such as interacting with APIs or databases. It contains the Repository and ApiService for data fetching.
 
 **Using Clean Architecture ensures:**
 
-1. Testability: Layers are isolated, making it easy to test each component independently.
-
-2. Maintainability: Code is modular, and changes in one layer don't affect others.
-
-3. Scalability: The application can grow without making the codebase unmanageable.
+**1. Testability:** Layers are isolated, making it easy to test each component independently.
+     
+**2. Maintainability:** Code is modular, and changes in one layer don't affect others.
+     
+**3. Scalability:** The application can grow without making the codebase unmanageable.
 
 # Unit Test Cases
 
@@ -45,7 +44,7 @@ Data is fetched from two API endpoints: one for user data and one for post data.
 
 Users: Fetches user details (e.g., name, avatar, email, etc.).
 Posts: Fetches posts associated with each user.
-
+    
 **2. Combining Data:**
 The UseCase processes the fetched data and combines the user and post details. It matches each user with their corresponding post and filters out posts with invalid data (such as an "Unknown" username or missing avatar).
 
@@ -60,7 +59,7 @@ The ViewModel has a StateFlow that holds the current UI state:
 
 1. Loading: When data is being fetched.
 2. Success: When data is successfully fetched.
-3. Error: When there is an error fetching data.
+3. Error: When there is an error while fetching data.
 
 ViewModel Flow:
 1. The ViewModel calls the UseCase.
@@ -85,4 +84,9 @@ UI Components:
 
 # Conclusion:
 This project demonstrates the use of Clean Architecture, Jetpack Compose, and Hilt to create a maintainable, testable, and scalable Android application. By separating concerns into different layers, this approach ensures that the app is easy to extend and maintain. Jetpack Compose simplifies the UI creation and makes the app reactive to state changes, while Hilt handles dependency injection for better modularity and testability.
+
+# Screen Shots
+<img src="https://github.com/user-attachments/assets/71ef93d5-f7c6-46a0-9723-1d19b712c79e" width="250" height="550">
+<img src="https://github.com/user-attachments/assets/874dff7f-ae5b-49c9-9322-d929feb7254f" width="250" height="550">
+<img src="https://github.com/user-attachments/assets/2905f70e-a195-42c7-bdbc-bb10acfd95e9" width="250" height="550">
 
