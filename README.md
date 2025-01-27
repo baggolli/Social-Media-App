@@ -1,4 +1,4 @@
-# Social-Media-App [League]
+# Social-Media-App
 
 This project demonstrates an Android application that displays a list of user posts. It follows Clean Architecture, uses Jetpack Compose for the UI, and leverages Hilt for dependency injection. The project fetches data from a REST API, processes it, and displays it in a responsive UI.
 
